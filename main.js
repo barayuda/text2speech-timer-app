@@ -13,7 +13,7 @@ function createWindow () {
     resizable: false,
     icon: __dirname + '/build/icon.ico'
   });
-  // mainWindow.setMenu(null);
+  mainWindow.setMenu(null);
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   mainWindow.on('closed', function() {

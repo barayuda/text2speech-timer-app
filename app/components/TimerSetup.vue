@@ -1,17 +1,26 @@
 <template>
   <form>
-  	 <label for="min">menit<br />
-  	 <input type="number" v-model="minutes" name="time_m" id="min" min="0" max="59">
-  	 </label>
-  	 <label for="sec">detik<br />
-  		  <input type="number" v-model="secondes" name="time_s" id="sec" max="59" min="0">
-  	 </label>
-  	 <button type="button" @click="sendTime">Set time</button>
+    <div class="ui tiny form segment">
+      <div class="two fields">
+        <div class="field">
+          <label>Menit</label>
+          <input type="number" v-model="minutes" name="time_m" id="min" min="0" max="59">
+        </div>
+        <div class="field">
+          <label>Detik</label>
+          <input type="number" v-model="secondes" name="time_s" id="sec" max="59" min="0">
+        </div>
+      </div>
+      <button class="ui submit button" type="button" @click="sendTime">Set time</button>
+    </div>
   </form>
 </template>
 
 <script>
   import { shell } from 'electron'
+  import Artyom from 'artyom.js'
+
+  const Bara = new Artyom();
 
   export default {
     data () {

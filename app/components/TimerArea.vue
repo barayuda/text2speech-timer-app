@@ -1,15 +1,15 @@
 <template>
-  <div id="timer-container" v-cloak>
-    <h1>Timer</h1>
+  <div class="ui segment" id="timer-container" v-cloak>
+    <h1 class="ui header">Timer</h1>
     <div class="ui relaxed divided selection list">
     	<timer-setup v-if="!time" @set-time="setTime"></timer-setup>
     	 <div v-else>
     		 <timer :time="prettyTime"></timer>
-    		 <div>
-    			  <button v-if="!isRunning" @click="start">Start</button>
-    			  <button v-if="isRunning" @click="stop">Stop</button>
-    			  <button @click="reset">Reset</button>
-    		 </div>
+          <div class="ui buttons">
+            <button class="ui positive button" v-if="!isRunning" @click="start">Start</button>
+            <button class="ui button" @click="reset">Reset</button>
+            <button class="ui button" v-if="isRunning" @click="stop">Stop</button>
+          </div>
     	</div>
     </div>
   </div>
@@ -18,6 +18,9 @@
 <script>
   import TimerSetup from './TimerSetup.vue'
   import Timer from './Timer.vue'
+  import Artyom from 'artyom.js'
+
+  const Bara = new Artyom();
 
   export default {
 
@@ -30,6 +33,7 @@
         timer:null,
         // Text-to-speech will be here later
         sound:new Audio("http://s1download-universal-soundbank.com/wav/nudge.wav")
+        // sound: Bara.say('Time-up!')
       }
     },
 

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
 body {
-  margin: 0;
+  margin: 0!important;
   padding: 0;
   border: 0;
   overflow: hidden;
@@ -48,7 +48,7 @@ body {
 
 #cat-header {
   background-color: #4A5557;
-  height: 60px;
+  height: 50px;
   position: relative;
 }
 
@@ -59,7 +59,6 @@ body {
   text-transform: uppercase;
   position: absolute;
   bottom: 10px;
-  left: 15px;
 }
 
 #categories h2 .bookmark.icon,
@@ -98,9 +97,20 @@ div.content:hover i.remove.icon {
   opacity: 1;
 }
 
-#links-container, #timer-container {
+#timer-container {
   position: fixed;
   top: 0;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: #D4D9DA;
+  color: #5F676A;
+}
+
+#links-container {
+  position: fixed;
+  top: 42%;
   left: 300px;
   right: 0;
   bottom: 0;

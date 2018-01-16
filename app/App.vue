@@ -5,11 +5,13 @@
       v-on:category-selected="setSelectedCategory">
       <!-- bind 'selected-category event to the event handler setSelectedCategory' -->
     </sidebar>
-    <timer-area></timer-area>
-    <bookmark-list
-      :bookmarks="bookmarks | filterByCategory selectedCategory"
-      :categories="categories">
-    </bookmark-list>
+    <div class="ui segments">
+      <timer-area></timer-area>
+      <bookmark-list
+        :bookmarks="bookmarks | filterByCategory selectedCategory"
+        :categories="categories">
+      </bookmark-list>
+    </div>
   </div>
 </template>
 

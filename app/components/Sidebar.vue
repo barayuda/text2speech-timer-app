@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="categories">
+    <div class="ui segment" id="categories">
       <div id="cat-header">
         <h2><i class="announcement icon green"></i>Text-to-speech App</h2>
       </div>

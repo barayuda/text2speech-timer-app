@@ -1,5 +1,5 @@
 <template>
-  <div id="links-container">
+  <div class="ui segment" id="links-container">
     <div id="toolbar">
       <div class="ui inverted icon fluid input">
         <input v-model="query" type="text" placeholder="Cari Bookmark...">
