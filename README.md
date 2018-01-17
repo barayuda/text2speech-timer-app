@@ -23,5 +23,9 @@ laptop-terminal$ npm install
 laptop-terminal$ webpack && npm start
 ```
 
+## Preview
+
+![preview](https://raw.githubusercontent.com/barayuda/text2speech-timer-app/master/mvp-preview-text2speech-timer-app.jpg)
+
 ## MVP : User bisa set timer, dan suara saat timer 0
 ## Alpha :
