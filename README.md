@@ -14,7 +14,7 @@ dengan memanfaatkan firebase sebagai database.
 Teknologi yang digunakan: Webpack, Semantic-UI, VueJS, Artyom.JS, Electron, NodeJS, FireBase
 ```
 
-## Testing
+## Instalasi
 
 ```
 laptop-terminal$ git clone https://github.com/barayuda/text2speech-timer-app.git
