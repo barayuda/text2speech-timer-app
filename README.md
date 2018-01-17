@@ -28,4 +28,7 @@ laptop-terminal$ webpack && npm start
 ![preview](https://raw.githubusercontent.com/barayuda/text2speech-timer-app/master/mvp-preview-text2speech-timer-app.jpg)
 
 ## ROADMAP
-* Silahkan kunjungi link ini https://github.com/barayuda/text2speech-timer-app/wiki
+* https://github.com/barayuda/text2speech-timer-app/wiki
+
+## PROJECT BOARD
+* https://github.com/barayuda/text2speech-timer-app/projects/1
