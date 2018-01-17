@@ -3,7 +3,7 @@
     <div class="ui tiny form segment">
       <div class="two fields">
         <div class="field">
-          <label>Text</label>
+          <label>Speech</label>
           <input type="text" v-model="custom_artyom" name="custom_artyom" id="custom_artyom">
         </div>
         <div class="field">
