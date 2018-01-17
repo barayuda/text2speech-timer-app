@@ -27,5 +27,5 @@ laptop-terminal$ webpack && npm start
 
 ![preview](https://raw.githubusercontent.com/barayuda/text2speech-timer-app/master/mvp-preview-text2speech-timer-app.jpg)
 
-## MVP : User bisa set timer, dan suara saat timer 0
-## Alpha :
+## ROADMAP
+* Silahkan kunjungi link ini https://github.com/barayuda/text2speech-timer-app/wiki
