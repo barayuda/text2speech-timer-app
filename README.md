@@ -11,7 +11,7 @@ Aplikasi ini akan dikembangkan dengan user dapat menyimpan beberapa timer-set
 dengan memanfaatkan firebase sebagai database.
 
 ```
-Teknologi yang digunakan: Webpack, VueJS, Artyom.JS, Electron, NodeJS, FireBase
+Teknologi yang digunakan: Webpack, Semantic-UI, VueJS, Artyom.JS, Electron, NodeJS, FireBase
 ```
 
 ## Testing
