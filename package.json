@@ -2,6 +2,8 @@
   "name": "text2speech-timer-app",
   "version": "1.0.0",
   "description": "A Text-to-speech timer app using Electron, VueJs and Firebase",
+  "homepage": "https://github.com/barayuda/text2speech-timer-app",
+  "repository": "https://github.com/barayuda/text2speech-timer-app",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
@@ -30,7 +32,7 @@
       ]
     },
     "win": {
-      "target": "squirrel",
+      "target": "NSIS",
       "icon": "build/icon.ico"
     }
   },

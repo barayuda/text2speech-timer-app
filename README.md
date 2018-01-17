@@ -32,3 +32,6 @@ laptop-terminal$ webpack && npm start
 
 ## PROJECT BOARD
 * https://github.com/barayuda/text2speech-timer-app/projects/1
+
+## RELEASES
+* https://github.com/barayuda/text2speech-timer-app/releases
