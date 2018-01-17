@@ -3,6 +3,10 @@
     <div class="ui tiny form segment">
       <div class="two fields">
         <div class="field">
+          <label>Text</label>
+          <input type="text" v-model="custom_artyom" name="custom_artyom" id="custom_artyom">
+        </div>
+        <div class="field">
           <label>Menit</label>
           <input type="number" v-model="minutes" name="time_m" id="min" min="0" max="59">
         </div>
@@ -18,20 +22,18 @@
 
 <script>
   import { shell } from 'electron'
-  import Artyom from 'artyom.js'
-
-  const Bara = new Artyom();
 
   export default {
     data () {
 		 return {
+        custom_artyom: "",
 			  minutes:0,
 			  secondes:0
 		 }
   	},
   	methods: {
 		 sendTime() {
-		  this.$emit('set-time', {minutes:this.minutes, secondes:this.secondes})
+		  this.$emit('set-time', {custom_artyom: this.custom_artyom, minutes:this.minutes, secondes:this.secondes})
 		 }
   	}
 

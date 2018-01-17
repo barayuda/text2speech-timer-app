@@ -4,9 +4,6 @@
 
 <script>
   import { shell } from 'electron'
-  import Artyom from 'artyom.js'
-
-  const Bara = new Artyom();
 
   export default {
     props:['time'],

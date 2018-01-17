@@ -10,6 +10,7 @@
             <button class="ui button" @click="reset">Reset</button>
             <button class="ui button" v-if="isRunning" @click="stop">Stop</button>
           </div>
+          {{ custom_artyom }}
     	</div>
     </div>
   </div>
@@ -32,8 +33,8 @@
         time:0,
         timer:null,
         // Text-to-speech will be here later
-        sound:new Audio("http://s1download-universal-soundbank.com/wav/nudge.wav")
-        // sound: Bara.say('Time-up!')
+        custom_artyom: "",
+        // sound:new Audio("http://s1download-universal-soundbank.com/wav/nudge.wav")
       }
     },
 
@@ -54,8 +55,31 @@
   							 this.time--
   						} else {
   							 clearInterval(this.timer)
-  							 this.sound.play()
-  							 this.reset()
+  							 // this.sound.play()
+                 Bara.initialize({
+                   lang: "id-ID",
+                   debug: true, // Show messages in the console
+                   // If providen, you can only trigger a command if you say its name
+                   // e.g to trigger Good Morning, you need to say "Jarvis Good Morning"
+                   name: "Bara"
+                 }).then(() => {
+                   console.log('%c [GET VOICE] ' + '%c' + Bara.getVoices(), 'background: #000; color: #0F0', 'color: #000');
+                   console.log('%c [Initialize] ' + '%c Artyom has been succesfully initialized', 'background: #000; color: #0F0', 'color: #000');
+                 }).catch((err) => {
+                   console.error("Artyom couldn't be initialized: ", err);
+                 });
+
+                 Bara.say(this.custom_artyom,{
+                      onStart:function(){
+                        console.log('%c [onStart] ' + '%c The text is being readed', 'background: #000; color: #fff', 'color: #000');
+                      },
+                      onEnd:function(){
+                        console.log('%c [onEnd] ' + '%c Well, that was all!', 'background: #000; color: #fff', 'color: #000');
+                      }
+                  })
+
+                  Bara.fatality();
+  							  this.reset()
   						}
   				  }, 1000 )
   			 }
@@ -73,6 +97,7 @@
   		 },
   		 setTime (payload) {
   			 this.time = (payload.minutes * 60 + payload.secondes)
+         this.custom_artyom = payload.custom_artyom
   		 }
   	},
 
