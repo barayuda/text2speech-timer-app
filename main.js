@@ -1,9 +1,9 @@
 // Setup awal untuk electron
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+var electron = require('electron');
+var app = electron.app;
+var BrowserWindow = electron.BrowserWindow;
 
-let mainWindow;
+var mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({
